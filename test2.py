@@ -34,5 +34,5 @@ class CustomTests(unittest.TestCase):
         with self.assertRaises(IOError):
             cust.custom_function('abc.txt')
 
-if __name__=='__main__':
+if __name__ == '__main__':
     unittest.main()

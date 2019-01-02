@@ -1,9 +1,11 @@
+""" this is [test-code] """
 import unittest
 import os
 
 def custom_function(file_name):
-    with open(file_name, 'rt') as f:
-        return sum(1 for _ in f)
+    """ simple count file lines """
+    with open(file_name, 'rt') as file:
+        return sum(1 for _ in file)
 
 class CustomTests(unittest.TestCase):
 
@@ -11,7 +13,7 @@ class CustomTests(unittest.TestCase):
         # test전에 구조 생성
         print('\nsetUp')
         self.file_name = 'test_file.txt'
-        with open(self.file_name, 'wt') as f:
+        with open(self.file_name, 'wt') as file:
             f.write("""
                 안녕하세요. 
                 unittest 중입니다.
@@ -37,5 +39,5 @@ class CustomTests(unittest.TestCase):
         with self.assertRaises(IOError):
             custom_function('abc.txt')
 
-if __name__=='__main__':
+if __name__ == '__main__':
     unittest.main()
