@@ -32,7 +32,7 @@ class CustomTests(unittest.TestCase):
 
     def test_no_file(self):
         with self.assertRaises(IOError):
-            cust.custom_function('abc.txt')
+            cust.custom_function(self.file_name)
 
 if __name__=='__main__':
     unittest.main()
