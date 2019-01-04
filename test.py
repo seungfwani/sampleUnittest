@@ -10,7 +10,7 @@ def custom_function(file_name):
 class CustomTests(unittest.TestCase):
 
     def setUp(self):
-        # test전에 구조 생성
+        """test전에 구조 생성"""
         print('\nsetUp')
         self.file_name = 'test_file.txt'
         with open(self.file_name, 'wt') as f:
