@@ -2,6 +2,7 @@ import unittest
 import os
 
 def custom_function(file_name):
+    """ simple count file lines """
     with open(file_name, 'rt') as f:
         return sum(1 for _ in f)
 
