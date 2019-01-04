@@ -1,16 +1,13 @@
-""" this is [test-code] FOR test"""
 import unittest
 import os
 
 def custom_function(file_name):
-    """ simple count file lines """
     with open(file_name, 'rt') as f:
         return sum(1 for _ in f)
 
 class CustomTests(unittest.TestCase):
 
     def setUp(self):
-        """test전에 구조 생성"""
         print('\nsetUp')
         self.file_name = 'test_file.txt'
         with open(self.file_name, 'wt') as f:
