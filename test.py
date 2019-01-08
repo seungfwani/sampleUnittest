@@ -1,16 +1,14 @@
-""" this is [test-code] """
 import unittest
 import os
+import xmlrunner
 
 def custom_function(file_name):
-    """ simple count file lines """
     with open(file_name, 'rt') as f:
         return sum(1 for _ in f)
 
 class CustomTests(unittest.TestCase):
 
     def setUp(self):
-        # test전에 구조 생성
         print('\nsetUp')
         self.file_name = 'test_file.txt'
         with open(self.file_name, 'wt') as f:
@@ -21,7 +19,6 @@ class CustomTests(unittest.TestCase):
                 """.strip())
 
     def tearDown(self):
-        # 테스트 종료 후 파일 삭제
         print('\ntearDown')
         try:
             os.remove(self.file_name)
@@ -29,7 +26,6 @@ class CustomTests(unittest.TestCase):
             pass
 
     def test_runs(self):
-        # 단순 실행 여부 판단
         custom_function(self.file_name)
 
     def test_line_count(self):
@@ -39,5 +35,8 @@ class CustomTests(unittest.TestCase):
         with self.assertRaises(IOError):
             custom_function('abc.txt')
 
-if __name__ == '__main__':
-    unittest.main()
+if __name__=='__main__':
+    with open('./QualityReports/unittest_results.xml', 'wb') as output:
+        unittest.main(
+            testRunner=xmlrunner.XMLTestRunner(output=output),
+            failfast=False, buffer=False, catchbreak=False)
