@@ -18,8 +18,6 @@ pipeline{
             sh './end.sh'
             
             recordIssues enabledForFailure: true, aggregatingResults: true, tool: pyLint(pattern: '**/*.log')
-            cobertura coberturaReportFile: 'QualityReports/coverage.xml', onlyStable: true
-            junit 'QualityReports/unittest_results.xml'
         }
     }
 }
