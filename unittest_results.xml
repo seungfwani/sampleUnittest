@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite errors="0" failures="1" name="CustomTests-20190108162138" skipped="0" tests="3" time="0.034" timestamp="2019-01-08T16:21:38">
+		<testcase classname="CustomTests" name="test_no_file" time="0.008" timestamp="2019-01-08T16:21:38"/>
+		<testcase classname="CustomTests" name="test_runs" time="0.009" timestamp="2019-01-08T16:21:38"/>
+		<testcase classname="CustomTests" name="test_line_count" time="0.017" timestamp="2019-01-08T16:21:38">
+			<failure message="3 != 4" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "test.py", line 32, in test_line_count
+    self.assertEqual(custom_function(self.file_name), 4)
+AssertionError: 3 != 4
+]]>			</failure>
+		</testcase>
+		<system-out>
+<![CDATA[
+setUp
+
+tearDown
+
+setUp
+
+tearDown
+
+setUp
+
+tearDown
+]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testsuite>
+</testsuites>

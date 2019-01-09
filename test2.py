@@ -1,5 +1,6 @@
 import unittest
 import os
+import xmlrunner
 import customClass as cust
 
 class CustomTests(unittest.TestCase):
@@ -35,4 +36,7 @@ class CustomTests(unittest.TestCase):
             cust.custom_function('abc.txt')
 
 if __name__ == '__main__':
-    unittest.main()
+    with open('./unittest_results.xml', 'wb') as output:
+        unittest.main(
+            testRunner=xmlrunner.XMLTestRunner(output=output),
+            failfast=False, buffer=False, catchbreak=False)

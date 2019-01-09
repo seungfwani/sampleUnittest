@@ -29,14 +29,14 @@ class CustomTests(unittest.TestCase):
         custom_function(self.file_name)
 
     def test_line_count(self):
-        self.assertEqual(custom_function(self.file_name), 3)
-
+        self.assertEqual(custom_function(self.file_name), 4)
+ 
     def test_no_file(self):
         with self.assertRaises(IOError):
             custom_function('abc.txt')
 
 if __name__=='__main__':
-    with open('./QualityReports/unittest_results.xml', 'wb') as output:
+    with open('./unittest_results.xml', 'wb') as output:
         unittest.main(
             testRunner=xmlrunner.XMLTestRunner(output=output),
             failfast=False, buffer=False, catchbreak=False)
