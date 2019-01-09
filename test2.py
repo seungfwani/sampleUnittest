@@ -36,7 +36,7 @@ class CustomTests(unittest.TestCase):
             cust.custom_function('abc.txt')
 
 if __name__ == '__main__':
-    with open('./unittest_results.xml', 'wb') as output:
+    with open('./QualityReports/unittest_results.xml', 'wb') as output:
         unittest.main(
             testRunner=xmlrunner.XMLTestRunner(output=output),
             failfast=False, buffer=False, catchbreak=False)
