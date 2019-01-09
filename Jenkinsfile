@@ -8,7 +8,8 @@ pipeline{
         }
         stage('build'){
             steps{
-                sh './start.sh'
+                sh '''chmod 755 start.sh end.sh pyenvInit.sh;\
+                    ./start.sh'''
             }
         }
     }
