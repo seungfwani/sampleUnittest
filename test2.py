@@ -33,6 +33,7 @@ class CustomTests(unittest.TestCase):
         self.assertEqual(cust.custom_function(self.file_name), 3)
 
     def test_no_file(self):
+        # pusudusus
         with self.assertRaises(IOError):
             cust.custom_function('abc.txt')
 
