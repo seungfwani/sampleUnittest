@@ -33,6 +33,12 @@ class CustomTests(unittest.TestCase):
         self.assertEqual(cust.custom_function(self.file_name), 3)
 
     def test_no_file(self):
+<<<<<<< HEAD
+=======
+        # 자이건 어떠냐
+        # 이거도 해봐
+        # 한번더 푸시
+>>>>>>> 0dc8d50ce3f361d043774f181a3bfc4351826f7d
         with self.assertRaises(IOError):
             cust.custom_function('abc.txt')
 
