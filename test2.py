@@ -46,7 +46,7 @@ class CustomTests(unittest.TestCase):
 if __name__ == '__main__':
     print(os.path.abspath( __file__ ).split('\\')[-1].split('.')[0])
     print(sys._getframe().f_code.co_filename.split('.')[0])
-    # with open('./QualityReports/unittest_results.xml', 'wb') as output:
-    #     unittest.main(
-    #         testRunner=xmlrunner.XMLTestRunner(output=output),
-    #         failfast=False, buffer=False, catchbreak=False)
+    with open('./QualityReports/unittest_results.xml', 'wb') as output:
+        unittest.main(
+            testRunner=xmlrunner.XMLTestRunner(output=output),
+            failfast=False, buffer=False, catchbreak=False)
