@@ -29,6 +29,7 @@ class CustomTests(unittest.TestCase):
         cust.custom_function(self.file_name)
 
     def test_line_count(self):
+        # check line count
         self.assertEqual(cust.custom_function(self.file_name), 3)
 
     def test_no_file(self):
