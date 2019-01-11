@@ -41,6 +41,7 @@ class CustomTests(unittest.TestCase):
         #다시시도
         # 왜 이상하지
         #재시도
+        # 와웅
         with self.assertRaises(IOError):
             cust.custom_function('abc.txt')
 
