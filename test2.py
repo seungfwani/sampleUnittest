@@ -34,6 +34,7 @@ class CustomTests(unittest.TestCase):
 
     def test_no_file(self):
         # 자이건 어떠냐
+        # 이거도 해봐
         with self.assertRaises(IOError):
             cust.custom_function('abc.txt')
 
