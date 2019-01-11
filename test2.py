@@ -1,5 +1,5 @@
 import unittest
-import os
+import os,sys
 import xmlrunner
 import customClass as cust
 
@@ -33,11 +33,14 @@ class CustomTests(unittest.TestCase):
         self.assertEqual(cust.custom_function(self.file_name), 3)
 
     def test_no_file(self):
+        # 자이건 어떠냐
         with self.assertRaises(IOError):
             cust.custom_function('abc.txt')
 
 if __name__ == '__main__':
-    with open('./QualityReports/unittest_results.xml', 'wb') as output:
-        unittest.main(
-            testRunner=xmlrunner.XMLTestRunner(output=output),
-            failfast=False, buffer=False, catchbreak=False)
+    print(os.path.abspath( __file__ ).split('\\')[-1].split('.')[0])
+    print(sys._getframe().f_code.co_filename.split('.')[0])
+    # with open('./QualityReports/unittest_results.xml', 'wb') as output:
+    #     unittest.main(
+    #         testRunner=xmlrunner.XMLTestRunner(output=output),
+    #         failfast=False, buffer=False, catchbreak=False)
