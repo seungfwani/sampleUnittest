@@ -37,6 +37,7 @@ class CustomTests(unittest.TestCase):
         # 이거도 해봐
         # 한번더 푸시
         # 제발 해봐
+        # 한번더
         with self.assertRaises(IOError):
             cust.custom_function('abc.txt')
 
